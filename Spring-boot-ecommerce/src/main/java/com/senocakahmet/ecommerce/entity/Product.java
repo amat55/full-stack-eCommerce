@@ -1,5 +1,6 @@
 package com.senocakahmet.ecommerce.entity;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -11,6 +12,7 @@ import java.util.Date;
 @Entity
 @Table(name = "product")
 @Data
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
